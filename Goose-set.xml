@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<!--
+Grumman G-21A/JRF-5 Goose
+
+July 2009	Gary "Buckaroo" Neely
+-->
+
+<PropertyList>
+
+<sim include="Systems/Goose-views.xml">
+  <description>Grumman G-21A Goose</description>
+  <author>Gary Neely</author>
+
+  <flight-model>yasim</flight-model>
+  <aero>Goose-yasim</aero>
+  <fuel-fraction>0.3</fuel-fraction>
+
+  <!-- Start offshore at defined locations, set to false for runway start, see Goose.nas for details -->
+  <presets>
+    <start-in-water type="bool">true</start-in-water> 
+  </presets>
+
+  <model>
+    <path>Aircraft/Goose/Models/Goose.xml</path>
+    <livery>
+      <file type="string">Catalina</file>
+    </livery>
+  </model> 
+
+  <submodels>
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/Goose/Models/submodels.xml</path>
+  </submodels>
+
+  <systems>
+    <electrical>
+      <path>Aircraft/Generic/generic-electrical.xml</path>
+    </electrical>
+  </systems> 
+
+  <sound>
+    <path>Aircraft/Goose/Sounds/Goose-sound.xml</path>
+  </sound>
+
+  <panel>
+    <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+    <visibility>false</visibility>
+  </panel>
+
+  <flaps>
+    <setting>0.00</setting>
+    <setting>0.50</setting> <!-- 30 deg -->
+    <setting>1.00</setting> <!-- 60 deg -->
+  </flaps>
+
+  <weight n="0">
+    <name>Crew</name>
+    <weight-lb>180</weight-lb> 
+    <max-lb>400</max-lb>
+    <min-lb>180</min-lb>
+  </weight>
+
+  <weight n="1">
+    <name>Passengers/Cargo</name>
+    <weight-lb>300</weight-lb> 
+    <max-lb>1700</max-lb>
+    <min-lb>0</min-lb>      
+  </weight>
+
+  <menubar>
+    <default>
+      <menu n="100">
+        <label>Goose</label>
+        <item>
+          <label>Select Livery</label>
+          <binding>
+            <command>nasal</command>
+            <script>aircraft.livery.dialog.toggle()</script>
+          </binding>
+        </item>
+<!--
+        <item>
+          <label>KEYW Water Start</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.setup_start()</script>
+          </binding>
+        </item>
+-->
+        <item>
+          <label>Autostart</label>
+          <binding>
+            <command>property-toggle</command>
+            <property>sim/model/start-idling</property>
+          </binding>
+        </item>
+        <item>
+          <label>Bow Doors</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.door_bow.toggle()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Anchor</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.Goose_anchor();</script>
+          </binding>
+        </item>
+        <item>
+          <label>Haul Up Anchor</label>
+          <binding>
+            <command>property-assign</command>
+            <property>/sim/hitches/anchor/open</property>
+            <value type="bool">true</value>
+          </binding>
+        </item>
+        <item>
+          <label>Fuel Reset</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.reset_fuel()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Toggle Engine Warnings</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.eng_warns_set();</script>
+          </binding>
+        </item>
+        <item>
+          <label>Toggle Engine Failures</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.eng_checks_set();</script>
+          </binding>
+        </item>
+        <item>
+          <label>Left Door</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.door_left.toggle()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Right Door</label>
+          <binding>
+            <command>nasal</command>
+            <script>Goose.door_right.toggle()</script>
+          </binding>
+        </item>
+        <item>
+          <label>Set Comm 1 to 122.75</label>
+          <binding>
+            <command>property-assign</command>
+            <property>instrumentation/comm[0]/frequencies/selected-mhz</property>
+            <value type="double">122.75</value>
+          </binding>
+        </item>
+      </menu>
+    </default>
+  </menubar>
+
+  <multiplay>
+    <generic>
+      <float n="0" alias="/controls/door-bow/position-norm"/>
+      <!-- <float n="1" alias="/sim/model/Goose/lighting/beacon"/> --> <!-- Doesn't work, see Goose.nas -->
+      <float n="2" alias="/controls/door-right/position-norm"/>
+      <float n="3" alias="/controls/door-left/position-norm"/>
+      <int n="0" alias="/controls/lighting/beacon"/>
+      <int n="1" alias="/controls/lighting/tail"/>
+      <int n="2" alias="/controls/lighting/nav"/>
+      <int n="3" alias="/controls/lighting/landing-left"/>
+      <int n="4" alias="/controls/lighting/landing-right"/>
+    </generic>
+  </multiplay>
+
+  <goose>
+    <engine-checks type="bool">false</engine-checks>
+    <engine-warns type="bool">false</engine-warns>
+  </goose>
+
+</sim>
+
+
+<engines>
+  <engine n="0">
+    <cyltempc type="float">15.0</cyltempc>
+    <cyltempc-biased type="float">15.0</cyltempc-biased>
+<!-- for engine testing:-->
+    <cyl-dt type="float">0.0</cyl-dt>
+    <cyl-dte type="float">0.0</cyl-dte>
+    <cyl-dtt type="float">0.0</cyl-dtt>
+    <cyl-dta type="float">0.0</cyl-dta>
+    <cyl-dtm type="float">0.0</cyl-dtm>
+    <oiltempc type = "float">15.0</oiltempc>
+    <oil-visc type = "float">1</oil-visc>
+    <oil-press type = "float">0.0</oil-press>
+    <fuel-press type ="float">0.0</fuel-press>
+    <strain type="int">0</strain>
+    <strain-clk-rev type="float">0</strain-clk-rev>
+    <strain-clk-temp type="float">0</strain-clk-temp>
+    <overrev type="int">0</overrev>
+    <overheat type="int">0</overheat>
+  </engine>
+  <engine n="1">
+    <cyltempc type="float">15.0</cyltempc>
+    <cyltempc-biased type="float">15.0</cyltempc-biased>
+<!-- for engine testing:-->
+    <cyl-dt type="float">0.0</cyl-dt>
+    <cyl-dte type="float">0.0</cyl-dte>
+    <cyl-dtt type="float">0.0</cyl-dtt>
+    <cyl-dta type="float">0.0</cyl-dta>
+    <cyl-dtm type="float">0.0</cyl-dtm>
+    <oiltempc type = "float">15.0</oiltempc>
+    <oil-visc type = "float">1</oil-visc>
+    <oil-press type = "float">0.0</oil-press>
+    <fuel-press type ="float">0.0</fuel-press>
+    <strain type="int">0</strain>
+    <strain-clk-rev type="float">0</strain-clk-rev>
+    <strain-clk-temp type="float">0</strain-clk-temp>
+    <overrev type="int">0</overrev>
+    <overheat type="int">0</overheat>
+  </engine>
+</engines>
+
+
+<controls include="Systems/Goose-init-controls.xml"/>
+
+
+<systems include="Systems/Goose-init-systems.xml"/>
+
+
+<instrumentation include="Systems/Goose-init-instrumentation.xml"/>
+
+
+<input>
+  <keyboard>
+    <key n="23">
+      <name>Ctrl-w</name>
+      <desc>Throw anchor</desc>
+      <binding>
+        <command>nasal</command>
+        <script>Goose.Goose_anchor();</script>
+      </binding>
+    </key>
+    <key n="87">
+      <name>W</name>
+      <desc>release anchor</desc>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/hitches/anchor/open</property>
+        <value type="bool">true</value>
+      </binding>
+    </key>
+    <key n="115">
+      <name>s</name>
+      <desc>Engine Starter</desc>
+      <binding>
+        <command>nasal</command>
+        <script>Goose.starter_null();</script>
+      </binding>
+    </key>
+  </keyboard>
+</input>
+
+
+<nasal>
+  <Goose>
+    <file>Aircraft/Goose/Nasal/Goose-doors.nas</file>
+    <file>Aircraft/Goose/Nasal/Goose_instrumentation_drivers.nas</file>
+    <file>Aircraft/Goose/Nasal/Goose-fuel.nas</file>
+    <file>Aircraft/Goose/Nasal/Goose-electrical.nas</file>
+    <file>Aircraft/Goose/Nasal/Goose-engines.nas</file>
+    <file>Aircraft/Goose/Nasal/Goose.nas</file>
+  </Goose>
+</nasal>
+
+</PropertyList>
+
+
+
+

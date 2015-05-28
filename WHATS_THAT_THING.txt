@@ -1,0 +1,76 @@
+The Grumman Goose (G-21A, JRF-5)
+--------------------------------
+
+What's That Thing?
+
+
+Q: What are those things sticking out of outer tips of the Elevator?
+
+A: Those are mass balancers. As the elevator is hinged well forward of its center of mass, control is not balanced. This can lead to control flutter, pilot fatigue, and possibly structural failure. So countering masses were placed well forward of the hinge line to help reduce this problem.
+
+
+Q: What are those graduated tube things on either behind and above the cockpit seats?
+
+A: Fuel gauges. Behind the copilot is the right tank gauge, behind the pilot is the left tank gauge. They lack markings because I haven't been able to make out the details in any of my photo references.
+
+
+Q: What's that cylinder in the bow compartment?
+
+A: That's a vacuum tank. The flaps are operated by vacuum forces, and so a large reserve tank for this purpose is fitted just forward of the cockpit on the copilot's side. Presumably operating the overhead flap lever opens a set of valves which retract or extend the flaps using vacuum-actuated pistons.
+
+
+Q: What are those holes in the wing leading edge just outboard of the engines?
+
+A: Oil cooler intakes.
+
+
+Q: What are those little intakes on the upper port side of the engine nacelles?
+
+A: Engine air intakes.
+
+
+Q: What about that weird stack of pipes on top of the engines?
+
+A: The Goose's exhaust was typically routed around another pipe and vented out dorsal slots. The central pipe is open at the front and leads down to a series of ducts to the cabin and the cockpit. It's purpose? Cabin heat. I've read that on cold days it was not always adequate.
+
+
+Q: What are those holes behind the tires and those little black holes on the underside of the plane?
+
+A: That is a system designed to break up the suction of the water against the hull on water take-offs. Air is sucked down through those side vents and allowed to flow out through the small stern holes, helping the aircraft to break free of the water when getting 'on the step'.
+
+
+Q: Where are the fuel tanks?
+
+A: There are two tanks of 110 gallons each, located in the wing roughly between the fuselage and their respective engine nacelle.
+
+
+Q: Where are the batteries?
+
+A: Located in the engine nacelles, directly behind the engines.
+
+
+Q: Oil tanks?
+
+A: Same as the batteries, mounted on the firewall of the engine nacelles. Each is a 9.5 gallon tank typically filled with 6 gallons of oil.
+
+
+Q: That tail wheel should be steerable, right?
+
+A: No. The tail wheel has a self-centering spring, but otherwise it is free to caster when unlocked.
+
+
+Q: Shouldn't the Goose have retractable floats?
+
+A: No, at least not as originally built. Float retract systems are a much later refit by the McKinnon company.
+
+
+Q: Where are the aileron trim tabs?
+
+A: The Goose doesn't have them. On many but not all there are small ground-set tabs for pre-set trim and balance, but there are no in-flight trim tabs.
+
+
+Q: What are those scary things on the forward cabin bulkhead?
+
+A: Tiki masks, naturally.
+
+

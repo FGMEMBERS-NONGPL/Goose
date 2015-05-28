@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>Main Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>512</w>
+<h>160</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>256</x>
+    <y>80</y>
+    <w>512</w>
+    <h>160</h>
+    <w-base>512</w-base>
+    <h-base>160</h-base>
+
+    <actions>
+
+<!-- Marker Beacon Test -->
+
+      <action>
+        <name>MBTestOn</name>
+        <button>0</button>
+        <x>-91</x>
+        <y>65</y>
+        <w>8</w>
+        <h>8</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/instrumentation/marker-beacon/test</property>
+        </binding>
+      </action>
+
+<!-- AI horizon adjustments -->
+
+      <action>
+        <name>calibrate fine dec</name>
+        <button>1</button>
+        <x>-148</x>
+        <y>14</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+          <step>-0.1</step>
+          <min>-5</min>
+          <max>5</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>calibrate fine inc</name>
+        <button>0</button>
+        <x>-148</x>
+        <y>14</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/attitude-indicator/horizon-offset-deg</property>
+          <step>0.1</step>
+          <min>-5</min>
+          <max>5</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+<!-- Tail Wheel Lock -->
+
+      <action>
+        <name>TailWheelCaster</name>
+        <button>0</button>
+        <x>-250</x>
+        <y>-80</y>
+        <w>20</w>
+        <h>35</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/gear/tailwheel-lock</property>
+        </binding>
+      </action>
+
+<!-- Altimeter inHG adjustment -->
+
+      <action>
+        <name>calibrate fine dec</name>
+        <button>1</button>
+        <x>-46</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>-0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>calibrate fine inc</name>
+        <button>0</button>
+        <x>-46</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/instrumentation/altimeter/setting-inhg</property>
+          <step>0.01</step>
+          <min>27.9</min>
+          <max>31.4</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+<!-- Clock adjustment hotspots -->
+
+      <action>
+        <name>hour dec</name>
+        <button>0</button>
+        <x>10</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>-3600</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>hour inc</name>
+        <button>0</button>
+        <x>22</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>3600</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>min dec</name>
+        <button>1</button>
+        <x>10</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>-60</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>min inc</name>
+        <button>1</button>
+        <x>22</x>
+        <y>40</y>
+        <w>12</w>
+        <h>12</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>instrumentation/clock/offset-sec</property>
+          <step>60</step>
+          <min>-43200</min>
+          <max>43200</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

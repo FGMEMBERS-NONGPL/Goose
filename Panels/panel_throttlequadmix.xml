@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>ThrottleQuadMix Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>64</w>
+<h>36</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>32</x>
+    <y>18</y>
+    <w>64</w>
+    <h>36</h>
+    <w-base>64</w-base>
+    <h-base>36</h-base>
+
+    <actions>
+
+<!-- Mixture controls -->
+
+      <action>
+        <name>MixtureL Leaner</name>
+        <button>0</button>
+        <x>-32</x>
+        <y>-18</y>
+        <w>16</w>
+        <h>36</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/mixture</property>
+          <step>-0.05</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>MixtureL Richer</name>
+        <button>1</button>
+        <x>-32</x>
+        <y>-18</y>
+        <w>16</w>
+        <h>36</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/mixture</property>
+          <step>0.05</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>MixtureR Leaner</name>
+        <button>0</button>
+        <x>16</x>
+        <y>-18</y>
+        <w>16</w>
+        <h>36</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/mixture</property>
+          <step>-0.05</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>MixtureR Richer</name>
+        <button>1</button>
+        <x>16</x>
+        <y>-18</y>
+        <w>16</w>
+        <h>36</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/mixture</property>
+          <step>0.05</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose 2D Hotspot panels -->
+<!-- Gary R. Neely 'Buckaroo', 2009  -->
+
+<PropertyList>
+
+
+<!-- Main -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_main.xml</path>
+  <top-left>
+    <x-m>2.684</x-m>
+    <y-m>-0.750</y-m>
+    <z-m>0.736</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>2.684</x-m>
+    <y-m>-0.750</y-m>
+    <z-m>0.271</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.684</x-m>
+    <y-m>0.750</y-m>
+    <z-m>0.271</z-m>
+  </bottom-right>
+</panel>
+
+<!-- Overhead (RPM lever etc.) -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_overhead.xml</path>
+  <top-left>
+    <x-m>3.523</x-m>
+    <y-m>-0.255</y-m>
+    <z-m>1.317</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>2.946</x-m>
+    <y-m>-0.255</y-m>
+    <z-m>1.162</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.946</x-m>
+    <y-m>0.105</y-m>
+    <z-m>1.162</z-m>
+  </bottom-right>
+</panel>
+
+<!-- Overhead Forward (starters, magnetos) -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_overheadfwd.xml</path>
+  <top-left>
+    <x-m>2.946</x-m>
+    <y-m>-0.255</y-m>
+    <z-m>1.162</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>2.846</x-m>
+    <y-m>-0.255</y-m>
+    <z-m>1.162</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.846</x-m>
+    <y-m>0.105</y-m>
+    <z-m>1.162</z-m>
+  </bottom-right>
+</panel>
+
+<!-- ThrottleQuad -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_throttlequad.xml</path>
+  <top-left>
+    <x-m>2.927</x-m>
+    <y-m>-0.212</y-m>
+    <z-m>1.200</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>2.972</x-m>
+    <y-m>-0.212</y-m>
+    <z-m>1.110</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.972</x-m>
+    <y-m>-0.137</y-m>
+    <z-m>1.110</z-m>
+  </bottom-right>
+</panel>
+
+<!-- ThrottleQuad Mixtures -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_throttlequadmix.xml</path>
+  <top-left>
+    <x-m>2.972</x-m>
+    <y-m>-0.212</y-m>
+    <z-m>1.110</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>2.934</x-m>
+    <y-m>-0.212</y-m>
+    <z-m>1.090</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.934</x-m>
+    <y-m>-0.137</y-m>
+    <z-m>1.090</z-m>
+  </bottom-right>
+</panel>
+
+<!-- Lighting Controls -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_lights.xml</path>
+  <top-left>
+    <x-m>3.0752</x-m>
+    <y-m>-0.746</y-m>
+    <z-m>0.391</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>3.075</x-m>
+    <y-m>-0.660</y-m>
+    <z-m>0.341</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>2.924</x-m>
+    <y-m>-0.660</y-m>
+    <z-m>0.341</z-m>
+  </bottom-right>
+</panel>
+
+<!-- Main Junction Box -->
+
+<panel>
+  <path>Aircraft/Goose/Panels/panel_mjb.xml</path>
+  <top-left>
+    <x-m>3.632</x-m>
+    <y-m>0.229</y-m>
+    <z-m>.675</z-m>
+  </top-left>
+  <bottom-left>
+    <x-m>3.632</x-m>
+    <y-m>0.229</y-m>
+    <z-m>0.567</z-m>
+   </bottom-left>
+  <bottom-right>
+    <x-m>3.740</x-m>
+    <y-m>0.229</y-m>
+    <z-m>0.567</z-m>
+  </bottom-right>
+</panel>
+
+</PropertyList>
+

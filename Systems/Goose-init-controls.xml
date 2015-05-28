@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<gear>
+  <tailwheel-lock>true</tailwheel-lock>
+  <brake-parking type="double">1.0</brake-parking>
+</gear>
+
+<winch>
+  <place type="bool">false</place>
+</winch>
+
+<lighting>
+  <cabin>0</cabin>
+  <lamp-flaps type="float">0</lamp-flaps>
+  <lamp-gear-left type="float">0</lamp-gear-left>
+  <lamp-gear-right type="float">0</lamp-gear-right>
+</lighting>
+
+<switches>
+  <aux type="int">0</aux>
+  <generator type="int">0</generator>
+  <battery n="0"><position type="int">0</position></battery>
+  <battery n="1"><position type="int">0</position></battery>
+  <volts-select-dc type="int">0</volts-select-dc>
+  <volts-select-ac type="int">0</volts-select-ac>
+  <starter n="0"><position type="int">0</position></starter>
+  <starter n="1"><position type="int">0</position></starter>
+  <panel-norm type="float">0</panel-norm>
+  <beacon type="int">0</beacon>
+  <tail type="int">0</tail>
+  <nav type="int">0</nav>
+  <landing-left type="int">0</landing-left>
+  <landing-right type="int">0</landing-right>
+</switches>
+
+</PropertyList>

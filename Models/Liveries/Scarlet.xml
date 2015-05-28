@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">Scarlet and Black</name>
+      <texture>txt_livery_scarlet_1.rgb</texture>
+    </livery>
+    <wing>
+      <texture>txt_livery_scarlet_2.rgb</texture>
+    </wing>
+  </model>
+</sim>
+
+</PropertyList>

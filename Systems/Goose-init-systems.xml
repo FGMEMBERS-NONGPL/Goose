@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+<electrical>
+  <bus-dc>
+    <volts type="double">24.0</volts>	<!-- initialize to good volts or lights over MP will fail for others -->
+    <amps  type="double">0</amps>
+  </bus-dc>
+
+  <power-source n="0">
+    <name>gen1</name>
+    <volts type="double">0</volts>
+    <amps  type="double">125</amps>
+  </power-source>
+  <power-source n="1">
+    <name>gen2</name>
+    <volts type="double">0</volts>
+    <amps  type="double">125</amps>
+  </power-source>
+  <power-source n="2">
+    <name>battery1</name>
+    <volts type="double">24.0</volts>
+    <amps  type="double">0</amps>
+  </power-source>
+  <power-source n="3">
+    <name>battery2</name>
+    <volts type="double">24.0</volts>
+    <amps  type="double">0</amps>
+  </power-source>
+
+  <test-volts-dc type="double">0</test-volts-dc>
+  <test-volts-ac type="double">0</test-volts-ac>
+</electrical>
+
+</PropertyList>
+

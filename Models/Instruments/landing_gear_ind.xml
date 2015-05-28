@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>landing_gear_ind.ac</path>
+
+<!-- Left -->
+<animation>
+  <type>select</type>
+  <object-name>LampLeftOn</object-name>
+  <condition>
+    <equals>
+      <property>/controls/lighting/lamp-gear-left</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+<!-- Right -->
+<animation>
+  <type>select</type>
+  <object-name>LampRightOn</object-name>
+  <condition>
+    <equals>
+      <property>/controls/lighting/lamp-gear-right</property>
+      <value>1</value>
+    </equals>
+  </condition>
+</animation>
+
+</PropertyList>
+

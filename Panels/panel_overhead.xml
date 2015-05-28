@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>Overhead Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>256</w>
+<h>424</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>128</x>
+    <y>212</y>
+    <w>256</w>
+    <h>424</h>
+    <w-base>256</w-base>
+    <h-base>424</h-base>
+
+    <actions>
+
+<!-- RPM levers -->
+
+      <action>
+        <name>RPM Inc</name>
+        <button>1</button>
+        <x>-124</x>
+        <y>-39</y>
+        <w>48</w>
+        <h>105</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-pitch</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/propeller-pitch</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>RPM Dec</name>
+        <button>0</button>
+        <x>-124</x>
+        <y>-39</y>
+        <w>48</w>
+        <h>105</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-pitch</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/propeller-pitch</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+<!-- Carb Heat Lever -->
+
+      <action>
+        <name>Carb Heat</name>
+        <button>0</button>
+        <x>-62</x>
+        <y>-39</y>
+        <w>48</w>
+        <h>105</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/anti-ice/engine/carb-heat</property>
+        </binding>
+      </action>
+
+<!-- Flaps -->
+
+      <action>
+        <name>Flaps Down</name>
+        <button>0</button>
+        <x>-84</x>
+        <y>-165</y>
+        <w>60</w>
+        <h>90</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/flaps</property>
+          <step>0.5</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Flaps Up</name>
+        <button>1</button>
+        <x>-84</x>
+        <y>-165</y>
+        <w>60</w>
+        <h>90</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/flight/flaps</property>
+          <step>-0.5</step>
+          <min>0</min>
+          <max>1</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

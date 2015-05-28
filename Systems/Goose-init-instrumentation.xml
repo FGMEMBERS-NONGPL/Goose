@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<rmi-needle n="0">
+  <mode type="int">0</mode>
+</rmi-needle>
+<rmi-needle n="1">
+  <mode type="int">0</mode>
+</rmi-needle>
+
+<marker-beacon>
+  <test type="int">0</test>
+</marker-beacon>
+
+</PropertyList>

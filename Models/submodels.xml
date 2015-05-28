@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!-- Note that submodel offsets are in feet not meters. -->
+
+<submodel>
+  <name>WakeHull</name>
+  <model>Aircraft/Goose/Models/wake.xml</model>
+  <trigger>/gear/gear[4]/wake</trigger>
+  <speed>0</speed>
+  <repeat>true</repeat>
+  <delay>0.1</delay>
+  <count>-1</count>
+  <x-offset>-14.764</x-offset>
+  <y-offset>0</y-offset>
+  <z-offset>-1.85</z-offset>
+  <buoyancy>32</buoyancy>
+  <life>10.0</life>
+  <wind>false</wind>
+  <eda>100</eda>
+</submodel>
+
+<submodel>
+  <name>WakeFloatL</name>
+  <model>Aircraft/Goose/Models/wake_sm.xml</model>
+  <trigger>/gear/gear[7]/wake</trigger>
+  <speed>0</speed>
+  <repeat>true</repeat>
+  <delay>0.1</delay>
+  <count>-1</count>
+  <x-offset>-4.0</x-offset>
+  <y-offset>-17.205</y-offset>
+  <z-offset>-0.148</z-offset>
+  <buoyancy>32</buoyancy>
+  <life>4.0</life>
+  <wind>false</wind>
+  <eda>100</eda>
+</submodel>
+
+<submodel>
+  <name>WakeFloatR</name>
+  <model>Aircraft/Goose/Models/wake_sm.xml</model>
+  <trigger>/gear/gear[6]/wake</trigger>
+  <speed>0</speed>
+  <repeat>true</repeat>
+  <delay>0.1</delay>
+  <count>-1</count>
+  <x-offset>-4.0</x-offset>
+  <y-offset>17.205</y-offset>
+  <z-offset>-0.148</z-offset>
+  <buoyancy>32</buoyancy>
+  <life>4.0</life>
+  <wind>false</wind>
+  <eda>100</eda>
+</submodel>
+
+</PropertyList>

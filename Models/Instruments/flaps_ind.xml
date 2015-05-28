@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>flaps_ind.ac</path>
+
+<animation>
+  <type>select</type>
+  <object-name>LampOn</object-name>
+  <condition>
+    <greater-than>
+      <property>controls/lighting/lamp-flaps</property>
+      <value>0</value>
+    </greater-than>
+  </condition>
+</animation>
+
+</PropertyList>
+

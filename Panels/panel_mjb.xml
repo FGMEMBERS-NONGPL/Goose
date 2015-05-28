@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>MJB Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>100</w>
+<h>100</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>50</x>
+    <y>50</y>
+    <w>100</w>
+    <h>100</h>
+    <w-base>100</w-base>
+    <h-base>100</h-base>
+
+    <actions>
+
+      <action>
+        <name>Switch Aux</name>
+        <button>0</button>
+        <x>-50</x>
+        <y>0</y>
+        <w>50</w>
+        <h>50</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/aux</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Gen</name>
+        <button>0</button>
+        <x>0</x>
+        <y>0</y>
+        <w>50</w>
+        <h>50</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/generator</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Battery L</name>
+        <button>0</button>
+        <x>-50</x>
+        <y>-50</y>
+        <w>50</w>
+        <h>50</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/battery[0]/position</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Battery R</name>
+        <button>0</button>
+        <x>0</x>
+        <y>-50</y>
+        <w>50</w>
+        <h>50</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/battery[1]/position</property>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

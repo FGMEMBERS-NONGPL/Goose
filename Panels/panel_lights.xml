@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>Lights Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>150</w>
+<h>100</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>75</x>
+    <y>50</y>
+    <w>150</w>
+    <h>100</h>
+    <w-base>150</w-base>
+    <h-base>100</h-base>
+
+    <actions>
+
+      <action>
+        <name>Switch Beacon</name>
+        <button>0</button>
+        <x>-65</x>
+        <y>13</y>
+        <w>20</w>
+        <h>24</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/beacon</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Nav</name>
+        <button>0</button>
+        <x>-40</x>
+        <y>13</y>
+        <w>20</w>
+        <h>24</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/nav</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Tail</name>
+        <button>0</button>
+        <x>-15</x>
+        <y>13</y>
+        <w>20</w>
+        <h>24</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/tail</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Landing L</name>
+        <button>0</button>
+        <x>16</x>
+        <y>13</y>
+        <w>20</w>
+        <h>24</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/landing-left</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Switch Landing R</name>
+        <button>0</button>
+        <x>42</x>
+        <y>13</y>
+        <w>20</w>
+        <h>24</h>
+        <binding>
+          <command>property-toggle</command>
+          <property>/controls/switches/landing-right</property>
+        </binding>
+      </action>
+
+      <action>
+        <name>Knob Inst Lights CW</name>
+        <button>0</button>
+        <x>-25</x>
+        <y>-40</y>
+        <w>50</w>
+        <h>40</h>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.panel_lights(0.1);</script>
+        </binding>
+      </action>
+      <action>
+        <name>Knob Inst Lights CCW</name>
+        <button>1</button>
+        <x>-25</x>
+        <y>-40</y>
+        <w>50</w>
+        <h>40</h>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.panel_lights(-0.1);</script>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

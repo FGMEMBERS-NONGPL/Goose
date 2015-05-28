@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+  <model>
+    <livery>
+      <name type="string">Catalina Seaplanes</name>
+      <texture>txt_livery_1.rgb</texture>
+    </livery>
+    <wing>
+      <texture>txt_livery_2.rgb</texture>
+    </wing>
+  </model>
+</sim>
+
+</PropertyList>

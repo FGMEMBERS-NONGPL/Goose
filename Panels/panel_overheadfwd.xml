@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+
+<!-- Grumman Goose Hotspot panel    -->
+<!-- Gary R. Neely 'Buckaroo', 2009 -->
+
+
+<PropertyList>
+
+<name>OverheadFwd Panel</name>
+<background>Aircraft/Goose/Panels/transparent-bg.rgb</background>
+<w>256</w>
+<h>72</h>
+
+<instruments>
+
+  <instrument>
+    <name>panel hotspots</name>
+    <x>128</x>
+    <y>36</y>
+    <w>256</w>
+    <h>72</h>
+    <w-base>256</w-base>
+    <h-base>72</h-base>
+
+    <actions>
+
+<!-- RPM levers cheat spot to left of throttle quad (easier to see) -->
+
+      <action>
+        <name>RPM Inc</name>
+        <button>1</button>
+        <x>-128</x>
+        <y>-36</y>
+        <w>24</w>
+        <h>72</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-pitch</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/propeller-pitch</property>
+          <step>0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+      <action>
+        <name>RPM Dec</name>
+        <button>0</button>
+        <x>-128</x>
+        <y>-36</y>
+        <w>24</w>
+        <h>72</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/propeller-pitch</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/propeller-pitch</property>
+          <step>-0.1</step>
+          <min>0</min>
+          <max>1.0</max>
+          <wrap>false</wrap>
+        </binding>
+      </action>
+
+
+<!-- Starter Buttons -->
+
+      <action>
+        <name>EngStart1</name>
+        <button>0</button>
+        <x>-22</x>
+        <y>-15</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.engine_starter(0,1)</script>
+        </binding>
+        <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.engine_starter(0,0)</script>
+        </binding>
+        </mod-up>
+      </action>
+      <action>
+        <name>EngStart2</name>
+        <button>0</button>
+        <x>10</x>
+        <y>-15</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.engine_starter(1,1)</script>
+        </binding>
+        <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>Goose.engine_starter(1,0)</script>
+        </binding>
+        </mod-up>
+      </action>
+
+
+<!-- Magneto 1 -->
+
+      <action>
+        <name>Rotate knob CW</name>
+        <button>0</button>
+        <x>52</x>
+        <y>-30</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob CCW</name>
+        <button>1</button>
+        <x>52</x>
+        <y>-30</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[0]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+<!-- All Magnetos Off -->
+
+      <action>
+        <name>Magnetos Off</name>
+        <button>0</button>
+        <x>76</x>
+        <y>-10</y>
+        <w>17</w>
+        <h>25</h>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine[0]/magnetos</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/engines/engine[1]/magnetos</property>
+          <value>0</value>
+        </binding>
+      </action>
+
+<!-- Magneto 2 -->
+
+      <action>
+        <name>Rotate knob CW</name>
+        <button>0</button>
+        <x>93</x>
+        <y>-30</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/magnetos</property>
+          <step>1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+      <action>
+        <name>Rotate knob CCW</name>
+        <button>1</button>
+        <x>93</x>
+        <y>-30</y>
+        <w>24</w>
+        <h>30</h>
+        <binding>
+          <command>property-adjust</command>
+          <property>/controls/engines/engine[1]/magnetos</property>
+          <step>-1</step>
+          <min>0</min>
+          <max>3</max>
+          <wrap>0</wrap>
+        </binding>
+      </action>
+
+    </actions>
+
+  </instrument>
+
+</instruments>
+
+</PropertyList>
+
+

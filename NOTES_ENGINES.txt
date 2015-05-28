@@ -1,0 +1,68 @@
+The Grumman Goose (G-21A, JRF-5)
+--------------------------------
+
+Notes on the R-985 Wasp Jr. Engine Simulation.
+
+The following is based on my research, understanding, and guesses. It should not be taken as gospel, and it should certainly not be taken as real R-985 operation instructions.
+
+
+Enabling Engine Failures:
+
+Normally you can abuse your Goose's engines all you want. But if you enable the menu option "Goose->Enable Engine Failures" your engines will begin taking damage under certain operationg conditions. Damage accumulates to no effect until the total reaches a given level, at which time the engine will fail and cannot be restarted. Note that you will not receive warnings of engine problems unless you enable Engine Warnings (see below).
+
+Damage currently occurs under these conditions:
+
+Over-revving: The engines were designed to run continuously up to a certain RPM. Higher than that is possible, but for a limited amount of time. For the R-985, the maximum continuous RPM is 2200. You can run your engines above this limit for up to one minute. After one minute, your engine will begin taking damage until you bring the RPM's back to 2200 or less.
+
+Cold oil: Until your engine warms up, its oil is rather thick and settled. The viscosity will improve as it warms and it will begin to fill the proper paths in the engine, doing its job as a) a lubricant and b) a coolant. As the engine warms, the viscosity improves and the oil pressure will rise. Until the engine warms, you want to keep it idling to minimize damage. If oil is not within 70-90 psi (about 70 degrees) and RPM is greater than 800, you will accumulate engine damage.
+
+Over-heated cylinders: The cylinder heads are designed to dissipate the heat from the controlled explosions occurring inside, but there are limits to how fast heat can be dissipated. Heat dissipates due to a) ambient cooling, b) blowing more air over the cooling fins due to prop thrust and airspeed, c) oil cooling, d) fuel flowing through the engine (this is much of why you run an engine full rich on the ground or at low airspeeds-- fuel acts as a coolant). In the model, your engine can take sustained temperatures up to 230 deg C. Over 230 the engine will take the heat for about a minute, then it will start to accumulate damage. Over 270, the engine will immediately take damage. Note that just backing off the power won't immediately stop the damage-- it takes time for the engine temp to drop back down to acceptable levels, and you'll be accumulating damage until it does.
+
+
+Enabling Engine Warnings:
+
+By toggling this option you'll see notices whenever your engine is taking damage. Enabling this option without enabling the Engine Failures option is a good way to practice staying within norms without risk.
+
+Currently there are 6 possible warnings:
+
+Engine <n> over-rev warning.
+Engine <n> oil temperature warning.
+Engine <n> over-heating warning.
+Engine <n> has passed <x>% damage.
+Engine <n> is critical. (90%+ damage)
+Engine <n> failure.
+
+
+Engine operating parameters:
+
+The following values are loosely based on the R-985 specifications found in the Beaver flight manual:
+
+cylinder temperature range:	100-270C (150-230 best)
+oil temperature range:		40-90C (60-80 best)
+oil pressure range:		50-100psi (70-90 best)
+fuel pressure range:		3-6psi (5 best)
+
+
+Setting Mixture:
+
+Most period Gooses did not have an EGT sensor so mixture settings could not be based on exhaust gas temperatures. The Goose has an auto-rich/lean mechanism to keep the engine at a reasonable mixture which I don't yet simulate, but of course the pilot can also adjust the mixture by the mixture levers.
+
+In the model, adjusting mixture is a little tricky and you'll have to play with it and see what works best for you. You can look for the effects of mixture on cylinder head temperature, though it's rather fine and hard to see. You can also watch the effects on fuel flow. With the constant-speed propeller, it's hard to see the effects on RPM.
+
+For climbing, the mixture should be kept well on the rich side, though the benefit of this are really not present until I can model the effects of additional fuel on cylinder cooling. In the real aircraft, mixture would be set to AUTO-RICH. For cruise you would set to AUTO-LEAN. Later hopefully I'll be able to simulate these settings. For approach (and descent under some circumstances) you would set to AUTO-RICH.
+
+For the R-985 it is arguably acceptable to set mixture on the lean side of peak. This was common for the larger radial engines and results in slightly better fuel economy. This is possible because the radials have better fuel distribution than inline opposing piston engines, for which as I understand it the recommendation is to set mixture on the rich side of peak.
+
+
+Carburetor Heat:
+
+Currently carb temperature isn't modeled, so the Carb Heat lever does nothing.
+
+
+---
+Gary R. Neely
+January 2010
+grneely@gmail.com
+"Buckaroo" on the Flighgear forums
+
+

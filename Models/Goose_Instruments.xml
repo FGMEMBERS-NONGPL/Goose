@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+<!--
+Grumman G-21A Goose
+Gary R. Neely 'Buckaroo', July 2009
+-->
+
+
+<PropertyList>
+
+<!-- Special Groups and Shaders -->
+
+<animation>
+  <type>noshadow</type>
+  <object-name>alt</object-name>
+  <object-name>compass</object-name>
+  <object-name>clock</object-name>
+  <object-name>asi</object-name>
+  <object-name>ai</object-name>
+  <object-name>vsi</object-name>
+  <object-name>turn_bank</object-name>
+  <object-name>ctl_pos</object-name>
+  <object-name>rpm_L</object-name>
+  <object-name>rpm_R</object-name>
+  <object-name>manpress_L</object-name>
+  <object-name>manpress_R</object-name>
+  <object-name>rmi</object-name>
+  <object-name>marker_beacons</object-name>
+  <object-name>landing_gear</object-name>
+  <object-name>flaps</object-name>
+  <object-name>oiltemp_L</object-name>
+  <object-name>oiltemp_R</object-name>
+  <object-name>fuelpress_L</object-name>
+  <object-name>fuelpress_R</object-name>
+  <object-name>oilpress_L</object-name>
+  <object-name>oilpress_R</object-name>
+  <object-name>cyltemp</object-name>
+  <object-name>fuelflow</object-name>
+  <object-name>oat</object-name>
+  <object-name>volts_dc</object-name>
+</animation>
+
+<!--
+  <object-name>mdi</object-name>
+  <object-name>air_temp</object-name>
+-->
+
+
+<!-- Captain Panel -->
+
+<model>
+  <name>marker_beacons</name>
+  <path>Aircraft/Goose/Models/Instruments/marker_beacons.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.203</y-m>
+    <z-m>0.705</z-m>
+    <roll-deg>90</roll-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>flaps</name>
+  <path>Aircraft/Goose/Models/Instruments/flaps_ind.xml</path>
+</model>
+
+<model>
+  <name>landing_gear</name>
+  <path>Aircraft/Goose/Models/Instruments/landing_gear_ind.xml</path>
+</model>
+
+<model>
+  <name>asi</name>
+  <path>Aircraft/Goose/Models/Instruments/asi.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.473</y-m>
+    <z-m>0.600</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>turn_bank</name>
+  <path>Aircraft/Goose/Models/Instruments/turn_bank.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.473</y-m>
+    <z-m>0.510</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>vsi</name>
+  <path>Aircraft/Goose/Models/Instruments/vsi.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.293</y-m>
+    <z-m>0.600</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>ai</name>
+  <path>Aircraft/Goose/Models/Instruments/ai_j8.xml</path> <!-- Bendix J-8 AI -->
+  <!--<path>Aircraft/Goose/Models/Instruments/ai.xml</path>--> <!-- Alternate modern AI -->
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.383</y-m>
+    <z-m>0.600</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>rmi</name>
+  <path>Aircraft/Goose/Models/Instruments/rmi.xml</path>
+  <offsets>
+    <x-m>2.685</x-m>
+    <y-m>-0.293</y-m>
+    <z-m>0.510</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>ctl_pos</name>
+  <path>Aircraft/Goose/Models/Instruments/control_positions_lg.xml</path>
+  <offsets>
+    <x-m>2.685</x-m>
+    <y-m>-0.203</y-m>
+    <z-m>0.600</z-m>
+  </offsets>
+</model>
+
+
+<!-- Center Console -->
+
+<model>
+  <name>alt</name>
+  <path>Aircraft/Goose/Models/Instruments/alt.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.09</y-m>
+    <z-m>0.670</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>compass</name>
+  <path>Aircraft/Goose/Models/Instruments/compass_magnetic.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>0</y-m>
+    <z-m>0.670</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>clock</name>
+  <path>Aircraft/Goose/Models/Instruments/clock_adjustable.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>0.09</y-m>
+    <z-m>0.670</z-m>
+  </offsets>
+</model>
+
+
+<!-- Engine Panel -->
+
+<model>
+  <name>rpm_L</name>
+  <path>Aircraft/Goose/Models/Instruments/rpm_L.xml</path>
+  <offsets>
+    <x-m>2.826</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.069</z-m>
+    <pitch-deg>30</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>rpm_R</name>
+  <path>Aircraft/Goose/Models/Instruments/rpm_R.xml</path>
+  <offsets>
+    <x-m>2.826</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.069</z-m>
+    <pitch-deg>30</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>manpress_L</name>
+  <path>Aircraft/Goose/Models/Instruments/manpress_L.xml</path>
+  <offsets>
+    <x-m>2.781</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>0.991</z-m>
+    <pitch-deg>30</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>manpress_R</name>
+  <path>Aircraft/Goose/Models/Instruments/manpress_R.xml</path>
+  <offsets>
+    <x-m>2.781</x-m>
+    <y-m>0.045</y-m>
+    <z-m>0.991</z-m>
+    <pitch-deg>30</pitch-deg>
+  </offsets>
+</model>
+
+
+<!-- Overhead Panel -->
+
+<model>
+  <name>fuelpress_L</name>
+  <path>Aircraft/Goose/Models/Instruments/fuelpress_L.xml</path>
+  <offsets>
+    <x-m>2.992</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.174</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>fuelpress_R</name>
+  <path>Aircraft/Goose/Models/Instruments/fuelpress_R.xml</path>
+  <offsets>
+    <x-m>2.992</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.174</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>oilpress_L</name>
+  <path>Aircraft/Goose/Models/Instruments/oilpress_L.xml</path>
+  <offsets>
+    <x-m>3.076</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.196</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>oilpress_R</name>
+  <path>Aircraft/Goose/Models/Instruments/oilpress_R.xml</path>
+  <offsets>
+    <x-m>3.076</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.196</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>oiltemp_L</name>
+  <path>Aircraft/Goose/Models/Instruments/oiltemp_L.xml</path>
+  <offsets>
+    <x-m>3.161</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.218</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>oiltemp_R</name>
+  <path>Aircraft/Goose/Models/Instruments/oiltemp_R.xml</path>
+  <offsets>
+    <x-m>3.161</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.218</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>cyltemp</name>
+  <path>Aircraft/Goose/Models/Instruments/cyltemp.xml</path>
+  <offsets>
+    <x-m>3.245</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.241</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>fuelflow</name>
+  <path>Aircraft/Goose/Models/Instruments/fuelflow.xml</path>
+  <offsets>
+    <x-m>3.245</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.241</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<model>
+  <name>oat</name>
+  <path>Aircraft/Goose/Models/Instruments/airtemp.xml</path>
+  <offsets>
+    <x-m>3.330</x-m>
+    <y-m>-0.045</y-m>
+    <z-m>1.264</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+
+<!--
+<model>
+  <name>oat</name>
+  <path>Aircraft/Goose/Models/Instruments/airtemp.xml</path>
+  <offsets>
+    <x-m>3.416</x-m>
+    <y-m>0.045</y-m>
+    <z-m>1.287</z-m>
+    <pitch-deg>75</pitch-deg>
+  </offsets>
+</model>
+-->
+
+
+<model>
+  <name>volts_dc</name>
+  <path>Aircraft/Goose/Models/Instruments/volts_dc.xml</path>
+  <offsets>
+    <x-m>3.686</x-m>
+    <y-m>0.229</y-m>
+    <z-m>0.713</z-m>
+  </offsets>
+</model>
+
+
+<!--
+<model>
+  <name>mdi</name>
+  <path>Aircraft/Goose/Models/Instruments/compass_mdi_with_hdg.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.434</y-m>
+    <z-m>0.844</z-m>
+  </offsets>
+</model>
+
+<model>
+  <name>rmi</name>
+  <path>Aircraft/Goose/Models/Instruments/rmi.xml</path>
+  <offsets>
+    <x-m>2.684</x-m>
+    <y-m>-0.252</y-m>
+    <z-m>0.844</z-m>
+  </offsets>
+</model>
+
+-->
+
+</PropertyList>
+
+

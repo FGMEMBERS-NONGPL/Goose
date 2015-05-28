@@ -1,0 +1,22 @@
+<PropertyList>
+
+<path>mesh_fuelgauge.ac</path>
+
+<animation>
+  <type>noshadow</type>
+  <object-name>FuelGaugeLevel</object-name>
+</animation>
+
+<animation>
+  <type>scale</type>
+  <object-name>FuelGaugeLevel</object-name>
+  <property>consumables/fuel/tank[0]/level-gal_us</property>
+  <x-factor>0</x-factor>
+  <x-offset>1</x-offset>
+  <y-factor>0</y-factor>
+  <y-offset>1</y-offset>
+  <z-factor>0.0091</z-factor>
+  <z-offset>0</z-offset>
+</animation>
+
+</PropertyList>
